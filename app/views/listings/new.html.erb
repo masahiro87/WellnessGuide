@@ -1,0 +1,44 @@
+<%= render 'partial/navbar' %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="text-center">
+						<span style="font-size:24px;">ウェルネスプログラムを掲載する</span>
+					</div>
+				</div>
+
+				<div class="panel-body">
+					<!-- ここからフォーム -->
+					<%= form_for @listing do |f| %>
+						<div class="row">
+							<div class="col-md-12 select">
+								<div class="form-group">
+									<label>カテゴリー</label>
+									<%= f.select :category, [["フィジカル","フィジカル"], ["メンタル","メンタル"], ["ビューティ","ビューティ"], ["フード","フード"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+								</div>
+							</div>
+						</div>
+						<br>
+
+						<div class="row">
+							<div class="col-md-12 select">
+								<div class="form-group">
+									<label>プログラム</label>
+									<%= f.select :program, [["エクササイズ","エクササイズ"],["ストレッチ","ストレッチ"],["ピラティス","ピラティス"],["ランニング","ランニング"],["ハイキング","ハイキング"],["サイクリング","サイクリング"],["ウォーキング","ウォーキング"],["ヨガ","ヨガ"],["マタニティヨガ","マタニティヨガ"],["太極拳","太極拳"],["気功","気功"],["祈祷","祈祷"],["パワースポット巡り","パワースポット巡り"],["瞑想","瞑想"],["禅","禅"],["睡眠","睡眠"],["マインドフルネス","マインドフルネス"],["マッサージ","マッサージ"],["湯治","湯治"],["ボディトリートメント","ボディトリートメント"],["フェイシャルマッサージ","フェイシャルマッサージ"],["エステ","エステ"],["タラソテラピー","タラソテラピー"],["食事","食事"],["デトックス","デトックス"],["ファスティング","ファスティング"],["漢方","漢方"],["料理体験","料理体験"], ["その他","その他"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+								</div>
+							</div>
+						</div>
+						<br>
+
+						<div class="actions">
+							<%= f.submit "Save", class: "btn btn-danger" %>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

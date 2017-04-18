@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: MyString
+  program: MyString
+  title: MyString
+  summary: MyText
+  language: MyString
+  price: 1
+  time_schedule: MyText
+  meeting_place: MyString
+  capacity: 1
+  price_include: MyText
+  to_bring: MyText
+  active: false
+  user: one
+
+two:
+  category: MyString
+  program: MyString
+  title: MyString
+  summary: MyText
+  language: MyString
+  price: 1
+  time_schedule: MyText
+  meeting_place: MyString
+  capacity: 1
+  price_include: MyText
+  to_bring: MyText
+  active: false
+  user: two
