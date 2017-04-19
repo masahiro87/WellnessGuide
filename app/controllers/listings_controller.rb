@@ -1,11 +1,13 @@
 class ListingsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_listing, only: [:update, :basics, :description, :meeting_place, :price, :photos, :calendar, :bankacccount, :publish]
+  before_action :set_listing, only: [:show, :update, :basics, :description, :meeting_place, :price, :photos, :calendar, :bankacccount, :publish]
 
   def index
+    @listings = current_user.listings
   end
 
   def show
+    @photos = @listing.photos
   end
 
   def new
@@ -28,8 +30,9 @@ class ListingsController < ApplicationController
   end
 
   def update
-    @listing.update(listing_params)
-    redirect_to :back, notice: "更新できました"
+    if @listing.update(listing_params)
+      redirect_to :back, notice: "更新できました"
+    end
   end
 
   def basics
