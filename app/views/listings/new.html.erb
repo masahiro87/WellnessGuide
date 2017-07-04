@@ -16,7 +16,7 @@
 							<div class="col-md-12 select">
 								<div class="form-group">
 									<label>カテゴリー</label>
-									<%= f.select :category, [["フィジカル","フィジカル"], ["メンタル","メンタル"], ["ビューティ","ビューティ"], ["フード","フード"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+									<%= f.select :category, [["フィジカル","フィジカル"], ["メンタル","メンタル"], ["ビューティ","ビューティ"], ["フード&ドリンク","フード&ドリンク"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
 								</div>
 							</div>
 						</div>
@@ -25,8 +25,28 @@
 						<div class="row">
 							<div class="col-md-12 select">
 								<div class="form-group">
-									<label>プログラム</label>
-									<%= f.select :program, [["エクササイズ","エクササイズ"],["ストレッチ","ストレッチ"],["ピラティス","ピラティス"],["ランニング","ランニング"],["ハイキング","ハイキング"],["サイクリング","サイクリング"],["ウォーキング","ウォーキング"],["ヨガ","ヨガ"],["マタニティヨガ","マタニティヨガ"],["太極拳","太極拳"],["気功","気功"],["祈祷","祈祷"],["パワースポット巡り","パワースポット巡り"],["瞑想","瞑想"],["禅","禅"],["睡眠","睡眠"],["マインドフルネス","マインドフルネス"],["マッサージ","マッサージ"],["湯治","湯治"],["ボディトリートメント","ボディトリートメント"],["フェイシャルマッサージ","フェイシャルマッサージ"],["エステ","エステ"],["タラソテラピー","タラソテラピー"],["食事","食事"],["デトックス","デトックス"],["ファスティング","ファスティング"],["漢方","漢方"],["料理体験","料理体験"], ["その他","その他"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+									<label>所要時間</label>
+									<%= f.select :program_time, [["２時間以内","２時間以内"],["２時間以上","２時間以上"],["数日間","数日間"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+								</div>
+							</div>
+						</div>
+						<br>
+
+						<div class="row">
+							<div class="col-md-12 select">
+								<div class="form-group">
+									<label>レベル</label>
+									<%= f.select :program_level, [["上級","上級"],["中級","中級"],["初級","初級"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+								</div>
+							</div>
+						</div>
+						<br>
+
+						<div class="row">
+							<div class="col-md-12 select">
+								<div class="form-group">
+									<label>ロケーション</label>
+									<%= f.select :location, [["屋内","屋内"],["屋外","屋外"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
 								</div>
 							</div>
 						</div>

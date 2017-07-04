@@ -8,15 +8,15 @@
     <div class="navbar-collapse collapse sidebar-navbar-collapse">
       <ul class="nav navbar-nav">
         <li class="<%= 'active' if controller?("listings") && action?("basics") %>">
-          <%= link_to "カテゴリー", manage_listing_basics_path(@listing) %>
+          <%= link_to "基本情報", manage_listing_basics_path(@listing) %>
         </li>
 
         <li class="<%= 'active' if controller?("listings") && action?("description") %>">
-          <%= link_to "プログラム", manage_listing_description_path(@listing) %>
+          <%= link_to "プログラム内容", manage_listing_description_path(@listing) %>
         </li>
 
         <li class="<%= 'active' if controller?("listings") && action?("meeting_place") %>">
-          <%= link_to "集合場所情報", manage_listing_meeting_place_path(@listing) %>
+          <%= link_to "実施場所", manage_listing_meeting_place_path(@listing) %>
         </li>
 
         <li class="<%= 'active' if controller?("listings") && action?("price") %>">
@@ -24,7 +24,7 @@
         </li>
 
         <li class="<%= 'active' if controller?("listings") && action?("photos") %>">
-          <%= link_to "写真", manage_listing_photos_path(@listing), data:{turbolinks:false} %>
+          <%= link_to "プログラム画像", manage_listing_photos_path(@listing), data:{turbolinks:false} %>
         </li>
 
         <li class="<%= 'active' if controller?("listings") && action?("calendar") %>">

@@ -13,6 +13,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :listings do
+    resources :reservations, only: [:create]
+  end
+
   get 'manage-listing/:id/basics' => 'listings#basics', as: 'manage_listing_basics'
   get 'manage-listing/:id/description' => 'listings#description', as: 'manage_listing_description'
   get 'manage-listing/:id/meeting_place' => 'listings#meeting_place', as: 'manage_listing_meeting_place'

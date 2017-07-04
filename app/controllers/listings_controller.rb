@@ -62,7 +62,7 @@ class ListingsController < ApplicationController
 
   private
   def listing_params
-    params.require(:listing).permit(:category, :program, :price)
+    params.require(:listing).permit(:program_level, :category, :program_time, :location, :title, :summary, :language, :price, :time_schedule, :meeting_place, :capacity, :price_include, :to_bring, :active)
   end
 
   def set_listing

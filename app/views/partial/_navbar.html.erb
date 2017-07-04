@@ -31,7 +31,15 @@
                 <%= current_user.name %>
               <% else %>
                 <!-- 認証ログインしていない時 -->
-                <% current_user.email.split("@")[0] %>
+                <% if current_user.image.present? %>
+        					<%= image_tag current_user.image, class: "profile-full img-circle" %>
+        				<% end %>
+                <% if current_user.name.present? %>
+                  <%= current_user.name %>
+                <% else %>
+                  <%= current_user.email.split("@")[0] %>
+                <% end %>
+
               <% end %>
               <span class="caret"></span>
             </a>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  listing: one
+  date: 2017-05-11 19:07:21
+  price: 1
+  commision: 1
+  total_price: 1
+
+two:
+  user: two
+  listing: two
+  date: 2017-05-11 19:07:21
+  price: 1
+  commision: 1
+  total_price: 1
